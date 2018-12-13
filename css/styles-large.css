@@ -1,0 +1,77 @@
+/* Add responsiveness for larger screens */ 
+/* Help  from slack community */
+*,*::after,*::before 
+{
+margin: 0;
+padding: 0;
+box-sizing: inherit;
+}
+
+html 
+{
+font-size: 60.5%;
+}
+
+body 
+{
+line-height: 1.7rem;
+box-sizing: border-box;
+}
+
+#breadcrumb 
+{
+  font-size: 2rem;
+}
+
+#restaurant-name 
+{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+#restaurants-list li 
+{
+  width: 30%;
+  align-items: center;
+  padding: 3%;
+}
+
+#restaurant-img 
+{
+  width:40%;
+  float: left;
+  align-self: baseline;
+  flex-direction: row;
+  order: 1;
+}
+
+#restaurant-hours 
+{
+  width: 50%;
+  order: 2;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  right: 0;
+  position:absolute;
+  padding-top: 5%;
+  overflow: auto;
+  font-size: 2rem;
+}
+
+#restaurant-address 
+{
+  order: 1;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#reviews-list 
+{
+  font-size: 2rem;
+}
+
+#reviews-container h2 
+{
+  font-size: x-large;
+}

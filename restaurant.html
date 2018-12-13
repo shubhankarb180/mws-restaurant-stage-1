@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <!-- Main CSS file -->
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/styles-medium.css">
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/styles-large.css">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.7/pwacompat.min.js"
+  integrity="sha384-ptgwb3/v69WGur7IwSnWOowVxE7hcRB3DG/EiHdejrw2sFNwUHynFbiRMPxc4hdS"
+  crossorigin="anonymous"></script> 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <title>Restaurant Info</title>
 </head>
@@ -15,10 +24,10 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1><a href="/" tabindex="1">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" role="navigation" aria-label="breadcrumb">
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -30,12 +39,12 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application" tabindex="-1"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+    <section id="restaurant-container" aria-labelledby="restaurant-name">
+      <h2 id="restaurant-name" tabindex="2"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
@@ -43,7 +52,7 @@
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+    <section id="reviews-container" aria-label="Reviews">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
@@ -52,7 +61,7 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a href="/" tabindex="4"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
@@ -62,7 +71,7 @@
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <!-- Google Maps -->
- <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
+  <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
   <!-- End scripts -->
 
 </body>

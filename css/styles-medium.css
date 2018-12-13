@@ -1,0 +1,58 @@
+/* Add media queries to display on medium screens */
+
+*,*::after,*::before 
+{
+margin: 0;
+padding: 0;
+box-sizing: inherit;
+}
+
+html 
+{
+font-size: 62.5%;
+}
+
+body 
+{
+line-height: 1.7rem;
+box-sizing: border-box;
+}
+
+.filter-options 
+{
+  flex-flow: row;
+  flex-grow: 1;
+}
+
+.filter-option h2 
+{
+  flex-grow: 2;
+}
+
+#restaurants-list 
+{
+  flex-flow: row wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+#restaurants-list li 
+{
+  width: 45%;
+  flex-shrink: 1;
+  padding: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+#restaurant-container 
+{
+  justify-content: center;
+  align-items: center;
+}
+
+#restaurant-img 
+{
+  max-width:100%;
+  justify-content: center;
+}

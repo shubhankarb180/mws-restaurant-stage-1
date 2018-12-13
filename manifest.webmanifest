@@ -1,0 +1,14 @@
+{
+  "name": "Restaurant-Review",
+  "short_name": "Review",
+  "display": "browser",
+  "start_url": "/",
+  "background_color": "#102a48",
+  "scope": "/",
+  "icons": [
+  	{
+  	  "src" : "/img/baseline-restaurant-24px.svg",
+  	  "type": "image/svg"
+  	}
+  ]
+}
